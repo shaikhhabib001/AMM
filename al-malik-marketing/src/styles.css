@@ -1,0 +1,138 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: Poppins, "sans-serif";
+    color: #444444;
+}
+
+/* Text Selection Color */
+/*** Works on common browsers ***/
+::selection {
+    background-color: rgb(161, 109, 41);
+    color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: rgb(161, 109, 41);
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: rgb(161, 109, 41);
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: rgb(161, 109, 41);
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: rgb(161, 109, 41);
+    color: #fff;
+}
+
+a {
+    color: rgb(161, 109, 41);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(161, 109, 41);
+    text-decoration: none;
+}
+
+.btn {
+    color: rgb(161, 109, 41) !important;
+    border-color: rgb(161, 109, 41) !important;
+}
+
+.btn:hover {
+    background-color: rgb(161, 109, 41) !important;
+    color: #fff !important;
+    border-color: rgb(161, 109, 41) !important;
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: rgb(161, 109, 41);
+    width: 40px;
+    height: 40px;
+    transition: all 0.4s;
+    border-radius: 50px;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: rgb(185, 142, 59);
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------------------------------------------------------
+  # Preloader
+  --------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid rgb(161, 109, 41);
+    border-top-color: #efefef;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*--------------------------------------------------------------
+  # Disable aos animation delay on mobile devices
+  --------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+}
